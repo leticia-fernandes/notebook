@@ -1,0 +1,14 @@
+<h1><%= @contact.name %></h1>
+<p>
+  Phone: <%= @contact.phone %>
+</p>
+<p>
+  Email: <%= @contact.email %>
+</p>
+
+<ul>
+  <li><%= link_to "Edit contact", edit_contact_path(@contact) %></li>
+  <li><%= link_to "Delete contact",
+                  contact_path(@contact),
+                  data: { turbo_method: :delete } %></li>
+</ul>
